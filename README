@@ -1,0 +1,18 @@
+SwissCoin - a hybrid scrypt PoW + PoS based cryptocurrency with an innovative investment period.
+
+https://github.com/swisscrypto/swisscoin
+
+
+
+To compile on ubuntu:
+sudo apt-get update
+sudo apt-get install git build-essential libboost-all-dev libdb++-dev libminiupnpc-dev libcurl4-openssl-dev
+git clone https://github.com/swisscrypto/swisscoin
+cd swisscoin/src
+make -f makefile.unix 
+
+or
+git clone https://github.com/swisscrypto/swisscoin
+cd swisscoin
+qmake
+make
