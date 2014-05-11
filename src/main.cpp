@@ -42,8 +42,9 @@ static CBigNum bnInitialHashTarget(~uint256(0) >> 20);
 unsigned int nStakeMinAge = 60 * 60 * 24 * 10; // minimum age for coin age
 unsigned int nStakeMaxAge = 60 * 60 * 24 * 30; // stake age of full weight
 unsigned int nStakeTargetSpacing = 1 * 60 * 2.5; // DIFF: 15-minute block spacing
+
 // tutaj
-int64 nChainStartTime = 1399764306;
+int64 nChainStartTime = 1399817271;
 
 int nCoinbaseMaturity = 180;
 CBlockIndex* pindexGenesisBlock = NULL;
@@ -2556,14 +2557,14 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1399764306;
+        block.nTime    = 1399817271;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 3619679;
+        block.nNonce   = 4350394;
 
         //// debug print
         printf("block.GetHash() == %s\n", block.GetHash().ToString().c_str());
         printf("block.hashMerkleRoot == %s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x824b527f9fabbf60238a16942de32d71f298e45df66247ba4a657839dbb7ec16"));
+        assert(block.hashMerkleRoot == uint256("0xd3f5843f3fc6d3100bfae2fc1ff2745447bef6cbf0cd14ac3cf53fb9fc0e86db"));
 // gen
 	    uint256 hash = block.GetHash();
         // set to true to mine genesis block - otherwise false
